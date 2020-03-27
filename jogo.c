@@ -5,19 +5,19 @@ int main()
 {
     char casas[9] = {'1','2','3','4','5','6','7','8','9'}; 
     int casaAtual = 0;
-    char jogadorAtual = 'X';
+    char jogadorAtual = 'X';    
     char sair = 'N'; 
 
     while (sair != 'S')
     {
         system("cls");
-        printf("\n\n               ");
+        printf("\n\n");
         for(int count = 0; count < 9; count++)
         {
             printf("%c", casas[count]);
             if(count == 2 || count == 5 || count == 8)
             {
-                printf("\n               ");
+                printf("\n");
             }
             else
             {
@@ -44,14 +44,15 @@ int main()
                 casas[0] == casas[5] && casas[5] == casas[8] || 
                 casas[2] == casas[4] && casas[4] == casas[6])
             {
+                sair = 'S';
+                system("cls");
                 printf("\n|-------------------------|\n      o Jogador %c ganhou!       \n|-------------------------|\n", jogadorAtual);
-                system("pause");
             }
             else if(casas[0] != '1' && casas[1] != '2' && casas[2] != '3' && casas[3] != '4' && casas[4] != '5' && casas[5] != '6' && casas[6] != '7' && casas[7] != '8' && casas[8] != '9')
             {
-                printf("\n|-------------------------|\n      Deu velha!       \n|-------------------------|\n");
-                system("pause");
                 sair = 'S';
+                system("cls");
+                printf("\n|-------------------------|\n      Deu velha!       \n|-------------------------|\n");                system("pause");
             }     
             else
             {
@@ -65,9 +66,18 @@ int main()
                 }
             }
         }
-        
-        
-        
-        
+    }  
+    for(int count = 0; count < 9; count++)
+    {
+        printf("%c", casas[count]);
+        if(count == 2 || count == 5 || count == 8)
+        {
+            printf("\n");
+        }
+        else
+        {
+            printf("|");
+        }        
     }    
+    system("pause");
 }
