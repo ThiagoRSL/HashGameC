@@ -1,2 +1,2 @@
 # HashGameC
-Hash game created in C Language.
+A simple Hash game created using C Language.
