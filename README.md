@@ -1,2 +1,2 @@
-# jogoC
-Jogo da velha em C
+# HashGameC
+Hash game created in C Language.
